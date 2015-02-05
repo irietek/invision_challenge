@@ -1,5 +1,25 @@
 section.hero {
   background: url(/img/bg_hero.png) no-repeat center center;
-  height: 425px;
-}
+  height: 425px; position: relative;
 
+  nav {
+    width: 575px; height: 32px; margin: 0 auto;
+    font-size: 12px; font-weight: 600;
+    text-transform: uppercase;
+    position: absolute; bottom: 1px;
+
+    ul {
+      float: left; height: 32px;
+      margin: 0; padding: 0; list-style: none;
+      li {
+        display: inline-block;
+        color: rgb(255, 255, 255); border-bottom: 3px solid rgb(0, 204, 153);
+        padding: 0px 5px 13px 5px; margin: 0 15px;
+      }
+    }
+    div.view {
+      float: right; height: 32px; width: 33px;
+      background: url(/img/subnav_list_on.png) no-repeat right 2px;
+    }
+  }
+}
