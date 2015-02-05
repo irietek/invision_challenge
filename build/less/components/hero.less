@@ -12,9 +12,11 @@ section.hero {
       float: left; height: 32px;
       margin: 0; padding: 0; list-style: none;
       li {
-        display: inline-block;
-        color: rgb(255, 255, 255); border-bottom: 3px solid rgb(0, 204, 153);
-        padding: 0px 5px 13px 5px; margin: 0 15px;
+        display: inline-block; color: rgb(255, 255, 255);
+        padding: 0px 5px 13px 5px; margin: 0 20px;
+        &.active {
+          border-bottom: 3px solid rgb(0, 204, 153);
+        }
       }
     }
     div.view {
