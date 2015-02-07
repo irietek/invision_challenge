@@ -1,21 +1,44 @@
 section.hero {
   background: url(/img/bg_hero.png) no-repeat center center;
-  height: 425px; position: relative;
+  margin-top: 60px; height: 425px; position: relative;
+
+  div.container {
+    width: 574px; height: 425px; position: relative;
+    margin: 0 auto;
+  }
+
+  form {
+    background-color: @hero_highlight_opacity;
+    font-family: "Open Sans";
+    width: 100%; height: 158px;
+    margin: 0 auto; border-radius: 3px;
+    position: absolute; top: 100px;
+
+    input {
+      background: transparent; font-size: 28px; font-weight: normal;
+      border: 0; color: rgb(255, 255, 255);
+      margin: 40px 30px 30px 30px; width: 100%;
+      &:focus { outline: none; }
+      &::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.5);}
+      &::-moz-placeholder { color: rgba(255, 255, 255, 0.5);}
+      &:-ms-input-placeholder { color: rgba(255, 255, 255, 0.5);}
+    }
+  }
 
   nav {
-    width: 575px; height: 32px; margin: 0 auto;
+    width: 100%; height: 32px; margin: 0 auto;
     font-size: 12px; font-weight: 600;
     text-transform: uppercase;
-    position: absolute; bottom: 1px;
+    position: absolute; bottom: 0;
 
     ul {
       float: left; height: 32px;
       margin: 0; padding: 0; list-style: none;
       li {
         display: inline-block; color: rgb(255, 255, 255);
-        padding: 0px 5px 13px 5px; margin: 0 20px;
+        padding: 0px 5px 12px 5px; margin: 0 35px 0 5px;
         &.active {
-          border-bottom: 3px solid rgb(0, 204, 153);
+          border-bottom: 3px solid @hero_highlight;
         }
       }
     }

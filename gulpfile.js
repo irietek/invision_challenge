@@ -1,4 +1,4 @@
-var gulp, less, path, minicss, rename, sourcemaps, browserSync;
+var gulp, less, path, paths, minicss, rename, sourcemaps, browserSync;
 
 gulp        = require('gulp');
 browserSync = require('browser-sync');
@@ -11,6 +11,18 @@ concat      = require('gulp-concat'),
 uglify      = require('gulp-uglify'),
 sourcemaps  = require('gulp-sourcemaps');
 
+paths = {
+  less: [
+    './build/less/app.less'
+  ],
+  angular : [
+    './build/js/app.js',
+    './build/js/App/factories/*.js',
+    './build/js/App/directives/*.js',
+    './build/js/App/controllers/*.js'
+  ]
+};
+
 gulp.task('browser-sync', function(){
   browserSync({
     server: {
@@ -20,7 +32,7 @@ gulp.task('browser-sync', function(){
 });
 
 gulp.task('less', function(){
-  gulp.src('./build/less/app.less')
+  gulp.src(paths.less)
     .pipe(sourcemaps.init())
     .pipe(less({
       paths : [ path.join(__dirname, 'less', 'includes') ]
@@ -33,7 +45,7 @@ gulp.task('less', function(){
 });
 
 gulp.task('angular', function(){
-  gulp.src('./build/js/**/*.js')
+  gulp.src(paths.angular)
     .pipe(concat('app.js'))
     .pipe(gulp.dest('./public/js'))
     .pipe(rename({suffix: '.min'}))
@@ -48,6 +60,7 @@ gulp.task('reload', function () {
 
 gulp.task('watch', function(){
   gulp.watch('./public/*.html', ['reload']);
+  gulp.watch('./public/data/*.json', ['angular']);
   gulp.watch('./build/js/**/*.js', ['angular']);
   gulp.watch('./build/less/**/*.less', ['less']);
 });

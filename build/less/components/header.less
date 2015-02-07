@@ -4,4 +4,46 @@ header {
   height: 60px; width: 100%;
   position: fixed; top: 0px;
   z-index: 1000;
+
+  div.logo {
+    float: left; margin: 17px 0 17px 60px;
+    height: 25px; width: 137px;
+    background: url(/img/logo.png) no-repeat center center;
+  }
+
+  div.toolbox {
+    float: right; margin-right: 60px; height: 60px;
+
+    div.new_message {
+      float: left;
+      height: 26px; width: 31px; margin: 17px 5px;
+      background: url(/img/new_message.png) no-repeat center center;
+    }
+
+    form {
+      float: left;
+      margin: 0; padding: 0; height: 60px;
+
+      input {
+        margin: 15px 10px; padding: 5px;
+        height: 18px; width: 218px;
+        color: @header_light; font-size: 14px;
+        background: transparent url(/img/search_icon.png) no-repeat 210px center;
+        border: 1px solid @header_dark;
+        border-radius: 3px;
+        &:focus { outline: none; }
+        &::-webkit-input-placeholder { color: rgba(255, 255, 255, 0.5);}
+        &::-moz-placeholder { color: rgba(255, 255, 255, 0.5);}
+        &:-ms-input-placeholder { color: rgba(255, 255, 255, 0.5);}
+      }
+    }
+
+    div.avatar {
+      float: left; margin: 15px 10px;
+      a {
+        display: inline-block; width: 46px;
+        background: url(/img/down_arrow_icon.png) no-repeat right -2px;
+      }
+    }
+  }
 }

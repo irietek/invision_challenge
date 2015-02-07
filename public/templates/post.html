@@ -1,0 +1,21 @@
+<div class="post">
+  <div class="header">
+    <div class="ctas">
+      <button class="reply"></button>
+      <button class="like"></button>
+      <button class="time">{{time}}</button>
+    </div>
+    <img ng-src="img/avatar_{{user}}.png">
+    <h3>{{name}}</h3>
+    <p>{{post}}</p>
+    <a class="link" href="#">{{link}}</a>
+    <button class="expand" ng-hide="expand == '0'">Expand</button>
+  </div>
+  <div class="media" ng-if="type == 'photo' || type == 'video'">
+    <img ng-show="photo" ng-src="{{photo}}">
+    <img ng-show="video" ng-src="{{video}}">
+  </div>
+  <div class="expand" ng-show="expanded">
+    Expanded
+  </div>
+</div>

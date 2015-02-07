@@ -1,0 +1,70 @@
+{
+  "posts": [
+    {
+      "id": 1000001,
+      "user": 1001,
+      "name": "Megan Robichaud",
+      "post": "My view this morning is simply beautiful...",
+      "link": "http://instagram.com/p/yVSHeZL_f3",
+      "type": "photo",
+      "time": "3m",
+      "photo": "/img/photo_1000001.png",
+      "reply": []
+    },
+    {
+      "id": 1000002,
+      "user": 1002,
+      "name": "Sam Soffes",
+      "post": "How to Get Inspired: the Right Way - Designmodo bit.ly/1lE4ujc Good stuff from @designmodo",
+      "type": "text",
+      "time": "56m",
+      "reply": []
+    },
+    {
+      "id": 1000003,
+      "user": 1003,
+      "name": "Jenny Shen",
+      "post": "Perfect day to be taking pictures",
+      "link": "instagram.com/p/mV0PNrHRwQ/",
+      "type": "link",
+      "time": "56m",
+      "reply": []
+    },
+    {
+      "id": 1000004,
+      "user": 1004,
+      "name": "Chloe Park",
+      "post": "Time to take a break!",
+      "link": "instagram.com/p/mV0PNrHRwQ/",
+      "type": "link",
+      "time": "25m",
+      "reply": []
+    },
+    {
+      "id": 1000005,
+      "user": 1005,
+      "name": "Buzz Usorne",
+      "post": "Road trip!",
+      "link": "bit.ly/1hkXFdK",
+      "photo": "/img/photo_1000005.png",
+      "type": "photo",
+      "time": "56m",
+      "reply": [
+        {
+          "id": 2000001
+        }
+      ]
+    },
+    {
+      "id": 1000006,
+      "user": 1006,
+      "name": "Jacqueline Saik",
+      "post": "I love this little guy!",
+      "link": "vimeo.com/p/mV0PNrHRwQ",
+      "video": "/img/video_1000006.png",
+      "type": "video",
+      "time": "56m",
+      "reply": []
+    }
+  ]
+}
