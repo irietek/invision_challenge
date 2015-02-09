@@ -11,7 +11,7 @@
   <header>
     <div class="logo"></div>
     <div class="toolbox">
-      <div class="new_message"></div>
+      <a href="#post" class="new_message"></a>
       <form class="search">
         <input type="text" name="keyword"/>
       </form>
@@ -26,6 +26,8 @@
     <div class="container">
       <form>
         <input type="text" name="post" placeholder="What's on your mind?" autofocus/>
+        <button class="photo"></button>
+        <button class="video"></button>
       </form>
       <nav>
         <ul class="filter">
@@ -44,6 +46,18 @@
             type="{{item.type}}" video="{{item.video}}" photo="{{item.photo}}"
             expand="{{item.reply.length}}">
       </post>
+    </div>
+  </section>
+  <section id="post" class="modal">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <form class="new_message">
+        <h2>Create new message</h2>
+        <textarea name="message"></textarea>
+        <button class="post" type="submit">Post</button>
+        <button class="photo"></button>
+        <button class="video"></button>
+      </form>
     </div>
   </section>
   <footer>

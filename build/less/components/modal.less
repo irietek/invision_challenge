@@ -1,0 +1,91 @@
+#post {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+
+  .close {
+    background: transparent;
+    color: @post_text;
+    font-size: 12px; font-weight: normal;
+    text-align: center; text-decoration: none;
+    position: absolute;
+    right: -26px; top: -22px;
+    line-height: 18px; width: 18px;
+    border: 1px solid @post_text;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+
+  div {
+    width: 534px; height: 170px;
+    position: relative;
+    margin: 160px auto 0 auto;
+    padding: 25px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    background: @text_border;
+
+    h2 {
+      margin: 0; padding: 0;
+      font-size: 18px; color: @post_text;
+      font-weight: normal;
+    }
+
+    textarea {
+      border: 0; border-radius: 2px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      margin: 15px 0; resize: none;
+      height: 90px; width: 100%;
+      background: #fff; color: @post_text;
+      font-size: 28px; font-weight: normal;                                                                                                             
+      &:focus { outline: none; }
+    }
+
+    button.video {
+      background: url(/img/add_video_dark.png) no-repeat left center;
+      width: 96px; height: 14px;
+      margin: 0 20px 0 0; padding: 0;
+      border: 0; cursor: pointer;
+    }
+
+    button.photo {
+      background: url(/img/add_photo_dark.png) no-repeat left center;
+      width: 96px; height: 14px;
+      margin: 0 20px 0 0; padding: 0;
+      border: 0; cursor: pointer;
+    }
+
+    button.post {
+      background: @hero_highlight;
+      padding: 8px 18px;
+      border: 0;
+      border-radius: 3px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      font-size: 14px; color: #fff;
+      float: right;
+    }
+  }
+
+}
+
+#post:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+
+
