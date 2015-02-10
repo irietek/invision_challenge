@@ -8,18 +8,26 @@
   <script type="text/javascript" src="js/app.min.js"></script>
 </head>
 <body>
-  <header>
-    <div class="logo"></div>
+  <header ng-init="dropdown = false">
+    <a class="logo" href="/"></a>
     <div class="toolbox">
       <a href="#post" class="new_message"></a>
       <form class="search">
         <input type="text" name="keyword"/>
       </form>
       <div class="avatar">
-        <a href="#">
+        <a href="#account" ng-mouseover="dropdown = true" ng-mouseout="dropdown = false">
           <img src="/img/avatar.png">
         </a>
       </div>
+      <nav class="account" ng-show="dropdown" ng-mouseover="dropdown = true" ng-mouseout="dropdown = false">
+        <ul>
+          <li><a href="/#profile">Profile</a></li>
+          <li><a href="/#followers">Followers</a></li>
+          <li><a href="/#following">Following</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
   <section class="hero">
@@ -31,15 +39,15 @@
       </form>
       <nav>
         <ul class="filter">
-          <li class="active">All Posts</li>
-          <li>Photos</li>
-          <li>Videos</li>
+          <li class="active"><a href="#all">All Posts</a></li>
+          <li><a href="#photos">Photos</a></li>
+          <li><a href="#videos">Videos</a></li>
         </ul>
         <div class="view"></div>
       </nav>
     </div>
   </section>
-  <section class="content" ng-controller="PostController as post">
+  <section class="content home" ng-controller="PostController as post">
     <div class="row" ng-repeat="item in post.items">
       <post name="{{item.name}}" user="{{item.user}}" 
             post="{{item.post}}" time="{{item.time}}" link="{{item.link}}"

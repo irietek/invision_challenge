@@ -1,6 +1,6 @@
 section.hero {
   background: url(/img/bg_hero.png) no-repeat center center;
-  margin-top: 60px; height: 425px; position: relative;
+  margin: 60px 0 -40px 0; height: 425px; position: relative;
 
   div.container {
     width: 574px; height: 425px; position: relative;
@@ -49,8 +49,11 @@ section.hero {
       float: left; height: 32px;
       margin: 0; padding: 0; list-style: none;
       li {
-        display: inline-block; color: rgb(255, 255, 255);
+        display: inline-block;
         padding: 0px 5px 12px 5px; margin: 0 35px 0 5px;
+        a {
+          text-decoration: none; color: rgb(255, 255, 255);
+        }
         &.active {
           border-bottom: 3px solid @hero_highlight;
         }
@@ -59,6 +62,7 @@ section.hero {
     div.view {
       float: right; height: 32px; width: 33px;
       background: url(/img/subnav_list_on.png) no-repeat right 2px;
+      cursor: pointer;
     }
   }
 }

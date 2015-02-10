@@ -1,0 +1,112 @@
+<!doctype html>
+<html ng-app="InVision">
+<head>
+  <title>inVision</title>
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <script type="text/javascript" src="js/jquery-2.1.3.min.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/app.min.js"></script>
+</head>
+<body>
+  <header ng-init="dropdown = false">
+    <a class="logo" href="/"></a>
+    <div class="toolbox">
+      <a href="#post" class="new_message"></a>
+      <form class="search">
+        <input type="text" name="keyword"/>
+      </form>
+      <div class="avatar">
+        <a href="#account" ng-mouseover="dropdown = true" ng-mouseout="dropdown = false">
+          <img src="/img/avatar.png">
+        </a>
+      </div>
+      <nav class="account" ng-show="dropdown" ng-mouseover="dropdown = true" ng-mouseout="dropdown = false">
+        <ul>
+          <li><a href="/#profile">Profile</a></li>
+          <li><a href="/#followers">Followers</a></li>
+          <li><a href="/#following">Following</a></li>
+          <li><a href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="content settings">
+    <h1>Settings</h1>
+    <form>
+      <div class="group">
+        <h3>Account</h3>
+          <div class="profile">
+            <img src="/img/profile.png">
+            <button>change</button>
+          </div>
+          <input type="text" name="username" value="Jessica Tuan">
+          <input type="email" name="email" value="jessica@gmail.com">
+          <input type="password" name="password" value="not_password">
+      </div>
+      <div class="group">
+        <h3>Notifications</h3>
+        <div>
+          <input id="n1" type="checkbox" name="email_when_favorited" checked="checked">
+          <label for="n1"><span></span>email me when my posts are marked as favorites</label>
+        </div>
+        <div>
+          <input id="n2" type="checkbox" name="email_when_mentioned" checked="checked">
+          <label for="n2"><span></span>email me when I'm mentioned</label>
+        </div>
+        <div>
+          <input id="n3" type="checkbox" name="email_when_replied" checked="checked">
+          <label for="n3"><span></span>email me when I get a reply</label>
+        </div>
+        <div>
+          <input id="n4" type="checkbox" name="email_when_followed" checked="checked">
+          <label for="n4"><span></span>email me when someone follows me</label>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Privacy</h3>
+        <div>
+          <input id="p1" type="radio" name="tag_pref" checked="checked">
+          <label for="p1"><span></span>allow anyone to tag me</label>
+        <div>
+          <input id="p2" type="radio" name="tag_pref">
+          <label for="p2"><span></span>only allow people I follow to tag me</label>
+        <div>
+          <input id="p3" type="radio" name="tag_pref">
+          <label for="p3"><span></span>don't allow anyone to tag me</label>
+        <div>
+          <input id="p4" type="checkbox" class="radio" name="location_pref" checked="checked">
+          <label for="p4"><span></span>add a location to my posts</label>
+        <div>
+          <input id="p5" type="checkbox" class="radio" name="follow_pref" checked="checked">
+          <label for="p5"><span></span>let others follow me by my email address</label>
+        <div>
+          <input id="p6" type="checkbox" class="radio" name="ad_pref" checked="checked">
+          <label for="p6"><span></span>tailor ads based on my information</label>
+      </div>
+      <button class="save" type="submit">Save Changes</button>
+    </form>
+  </section>
+  <section id="post" class="modal">
+    <div>
+      <a href="#close" title="Close" class="close">X</a>
+      <form class="new_message">
+        <h2>Create new message</h2>
+        <textarea name="message"></textarea>
+        <button class="post" type="submit">Post</button>
+        <button class="photo"></button>
+        <button class="video"></button>
+      </form>
+    </div>
+  </section>
+  <footer>
+    <ul>
+      <li><a href="#about_us">About Us</a></li>
+      <li><a href="#support">Support</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#terms">Terms</a></li>
+      <li>&copy; 2015 SIMPLYSOCIAL</li>
+    </ul>
+  </footer>
+</body>
+</html>
+
